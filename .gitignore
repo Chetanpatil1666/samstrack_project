@@ -1,13 +1,13 @@
 # Java / Maven build outputs
-samstrack_project-main/target/
-samstrack_project-main/.mvn/
-samstrack_project-main/mvnw
-samstrack_project-main/mvnw.cmd
+backend/target/
+backend/.mvn/
+backend/mvnw
+backend/mvnw.cmd
 
 # Node / React build outputs
-samstrack-frontend/node_modules/
-samstrack-frontend/dist/
-samstrack-frontend/.eslintcache
+frontend/node_modules/
+frontend/dist/
+frontend/.eslintcache
 
 # System & Editor configs
 .idea/

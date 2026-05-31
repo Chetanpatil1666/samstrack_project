@@ -50,14 +50,14 @@ spring.datasource.password=root
 ```
 
 ### 1. Starting the Backend Server
-Navigate to the backend directory `samstrack_project-main` and run:
+Navigate to the backend directory `backend` and run:
 ```bash
 ./mvnw spring-boot:run
 ```
 The server will start listening at: **`http://localhost:8080/`**
 
 ### 2. Starting the Frontend Server
-Navigate to the frontend directory `samstrack-frontend` and run:
+Navigate to the frontend directory `frontend` and run:
 ```bash
 npm install
 npm run dev
