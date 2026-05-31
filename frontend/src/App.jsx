@@ -6,6 +6,7 @@ import SubjectsManager from './components/SubjectsManager';
 import UsersManager from './components/UsersManager';
 import AttendanceManager from './components/AttendanceManager';
 import PromoPanel from './components/PromoPanel';
+import AnalyticsManager from './components/AnalyticsManager';
 
 // Sidebar Icons declared outside the component to satisfy static-components rule
 const DashboardIcon = () => (
@@ -58,6 +59,14 @@ const LogoutIcon = () => (
 const PromoIcon = () => (
   <svg className="nav-icon" viewBox="0 0 24 24">
     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+  </svg>
+);
+
+const AnalyticsIcon = () => (
+  <svg className="nav-icon" viewBox="0 0 24 24">
+    <line x1="18" y1="20" x2="18" y2="10" />
+    <line x1="12" y1="20" x2="12" y2="4" />
+    <line x1="6" y1="20" x2="6" y2="14" />
   </svg>
 );
 
@@ -132,6 +141,8 @@ export default function App() {
         return <div style={{ padding: '2rem', textAlign: 'center', color: 'var(--danger)' }}>Unauthorized access. Admins only.</div>;
       case 'attendance':
         return <AttendanceManager currentUser={currentUser} />;
+      case 'analytics':
+        return <AnalyticsManager />;
       case 'promo':
         return <PromoPanel />;
       default:
@@ -179,6 +190,15 @@ export default function App() {
               >
                 <AttendanceIcon />
                 Attendance
+              </div>
+            </li>
+            <li>
+              <div 
+                onClick={() => setCurrentView('analytics')} 
+                className={`nav-item ${currentView === 'analytics' ? 'active' : ''}`}
+              >
+                <AnalyticsIcon />
+                Analytics
               </div>
             </li>
             <li>
